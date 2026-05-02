@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
     <html lang="en" className={`${robotoFont.className}  h-full antialiased`}>
       <body className="min-h-full flex flex-col">
         <Navbar />
-        <main>{children}</main>
+        <main className="container mx-auto px-5">{children}</main>
         <Footer />
       </body>
     </html>

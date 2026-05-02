@@ -1,0 +1,101 @@
+[
+  {
+    "id": 1,
+    "title": "Complete Web Development Bootcamp",
+    "instructor": "John Doe",
+    "duration": "20 hours",
+    "rating": 4.6,
+    "level": "Beginner",
+    "description": "Learn full-stack web development from scratch.",
+    "image": "https://picsum.photos/seed/course1/400/250",
+    "category": "Development"
+  },
+  {
+    "id": 2,
+    "title": "UI/UX Design Masterclass",
+    "instructor": "Sarah Lee",
+    "duration": "15 hours",
+    "rating": 4.7,
+    "level": "Intermediate",
+    "description": "Master user interface and user experience design principles.",
+    "image": "https://picsum.photos/seed/course2/400/250",
+    "category": "Design"
+  },
+  {
+    "id": 3,
+    "title": "Digital Marketing Fundamentals",
+    "instructor": "Michael Smith",
+    "duration": "12 hours",
+    "rating": 4.8,
+    "level": "Beginner",
+    "description": "Learn SEO, social media marketing, and online advertising.",
+    "image": "https://picsum.photos/seed/course3/400/250",
+    "category": "Marketing"
+  },
+  {
+    "id": 4,
+    "title": "Advanced React & Next.js",
+    "instructor": "Emily Johnson",
+    "duration": "18 hours",
+    "rating": 4.9,
+    "level": "Advanced",
+    "description": "Build scalable web apps using React and Next.js.",
+    "image": "https://picsum.photos/seed/course4/400/250",
+    "category": "Development"
+  },
+  {
+    "id": 5,
+    "title": "Graphic Design Essentials",
+    "instructor": "David Brown",
+    "duration": "10 hours",
+    "rating": 4.8,
+    "level": "Beginner",
+    "description": "Learn Photoshop, Illustrator, and design basics.",
+    "image": "https://picsum.photos/seed/course5/400/250",
+    "category": "Design"
+  },
+  {
+    "id": 6,
+    "title": "Content Writing & Copywriting",
+    "instructor": "Sophia Wilson",
+    "duration": "8 hours",
+    "rating": 4.6,
+    "level": "Beginner",
+    "description": "Write engaging content and persuasive copy.",
+    "image": "https://picsum.photos/seed/course6/400/250",
+    "category": "Marketing"
+  },
+  {
+    "id": 7,
+    "title": "JavaScript Deep Dive",
+    "instructor": "Chris Evans",
+    "duration": "14 hours",
+    "rating": 4.4,
+    "level": "Intermediate",
+    "description": "Understand advanced JavaScript concepts and patterns.",
+    "image": "https://picsum.photos/seed/course7/400/250",
+    "category": "Development"
+  },
+  {
+    "id": 8,
+    "title": "Figma for Beginners",
+    "instructor": "Olivia Martin",
+    "duration": "6 hours",
+    "rating": 4.7,
+    "level": "Beginner",
+    "description": "Design modern UI using Figma from scratch.",
+    "image": "https://picsum.photos/seed/course8/400/250",
+    "category": "Design"
+  },
+  {
+    "id": 9,
+    "title": "Social Media Marketing Strategy",
+    "instructor": "Daniel Garcia",
+    "duration": "9 hours",
+    "rating": 4.6,
+    "level": "Intermediate",
+    "description": "Grow your brand using effective social media strategies.",
+    "image": "https://picsum.photos/seed/course9/400/250",
+    "category": "Marketing"
+  }
+]

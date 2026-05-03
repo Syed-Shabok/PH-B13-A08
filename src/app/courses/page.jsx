@@ -13,7 +13,7 @@ const page = async () => {
   return (
     <section className="w-full py-10">
       <h2
-        className="text-4xl 
+        className="text-3xl md:text-4xl 
        text-center mb-10"
       >
         Our Courses

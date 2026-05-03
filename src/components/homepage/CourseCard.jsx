@@ -11,7 +11,7 @@ const CourseCard = ({ course }) => {
   };
 
   return (
-    <Card className="rounded-xl border shadow-sm hover:shadow-lg  transition duration-300 flex flex-col hover:-translate-y-0.5 w-full h-full">
+    <Card className="rounded-xl border shadow-sm hover:shadow-lg  transition duration-300 flex flex-col hover:-translate-y-0.5 w-full h-full bg-gray-50">
       <div className="relative">
         <Image
           src={course.image}

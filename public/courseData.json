@@ -7,7 +7,7 @@
     "rating": 4.6,
     "level": "Beginner",
     "description": "Learn full-stack web development from scratch.",
-    "image": "https://picsum.photos/seed/course1/400/250",
+    "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=400&h=250&fit=crop",
     "category": "Development"
   },
   {
@@ -18,7 +18,7 @@
     "rating": 4.7,
     "level": "Intermediate",
     "description": "Master user interface and user experience design principles.",
-    "image": "https://picsum.photos/seed/course2/400/250",
+    "image": "https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=400&h=250&fit=crop",
     "category": "Design"
   },
   {
@@ -29,7 +29,7 @@
     "rating": 4.8,
     "level": "Beginner",
     "description": "Learn SEO, social media marketing, and online advertising.",
-    "image": "https://picsum.photos/seed/course3/400/250",
+    "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=400&h=250&fit=crop",
     "category": "Marketing"
   },
   {
@@ -40,7 +40,7 @@
     "rating": 4.9,
     "level": "Advanced",
     "description": "Build scalable web apps using React and Next.js.",
-    "image": "https://picsum.photos/seed/course4/400/250",
+    "image": "https://images.unsplash.com/photo-1633356122544-f134324a6cee?q=80&w=400&h=250&fit=crop",
     "category": "Development"
   },
   {
@@ -51,7 +51,7 @@
     "rating": 4.8,
     "level": "Beginner",
     "description": "Learn Photoshop, Illustrator, and design basics.",
-    "image": "https://picsum.photos/seed/course5/400/250",
+    "image": "https://images.unsplash.com/photo-1626785774573-4b799315345d?q=80&w=400&h=250&fit=crop",
     "category": "Design"
   },
   {
@@ -62,7 +62,7 @@
     "rating": 4.6,
     "level": "Beginner",
     "description": "Write engaging content and persuasive copy.",
-    "image": "https://picsum.photos/seed/course6/400/250",
+    "image": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=400&h=250&fit=crop",
     "category": "Marketing"
   },
   {
@@ -73,7 +73,7 @@
     "rating": 4.4,
     "level": "Intermediate",
     "description": "Understand advanced JavaScript concepts and patterns.",
-    "image": "https://picsum.photos/seed/course7/400/250",
+    "image": "https://images.unsplash.com/photo-1579468118864-1b9ea3c0db4a?q=80&w=400&h=250&fit=crop",
     "category": "Development"
   },
   {
@@ -84,7 +84,7 @@
     "rating": 4.7,
     "level": "Beginner",
     "description": "Design modern UI using Figma from scratch.",
-    "image": "https://picsum.photos/seed/course8/400/250",
+    "image": "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?q=80&w=400&h=250&fit=crop",
     "category": "Design"
   },
   {
@@ -95,7 +95,7 @@
     "rating": 4.6,
     "level": "Intermediate",
     "description": "Grow your brand using effective social media strategies.",
-    "image": "https://picsum.photos/seed/course9/400/250",
+    "image": "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?q=80&w=400&h=250&fit=crop",
     "category": "Marketing"
   }
 ]

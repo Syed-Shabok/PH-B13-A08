@@ -9,7 +9,7 @@ import { Button, Chip } from "@heroui/react";
 import CourseCurriculum from "@/components/coursesPage/CourseCurriculum";
 
 const fetchCourse = async (id) => {
-  const res = await fetch("http://localhost:3000/courseData.json");
+  const res = await fetch("https://json.shahriyar.dev/Syed-Shabok/skillSphere");
   const courses = await res.json();
 
   const course = courses.find((c) => c.id === Number(id));

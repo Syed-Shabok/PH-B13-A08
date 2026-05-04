@@ -42,46 +42,6 @@ const LoginPage = () => {
 
         <hr className="my-5 border border-gray-300" />
 
-        {/* <form onSubmit={handleSubmit(handleLogin)}>
-          <fieldset className="fieldset my-3 h-25">
-            <legend className="fieldset-legend text-lg">Email address</legend>
-            <input
-              type="email"
-              className="input w-full bg-gray-100 rounded-sm py-5"
-              placeholder="Enter your email address"
-              {...register("email", { required: "Email is required" })}
-            />
-            {errors.email && (
-              <span className="text-red-500 text-base">
-                {errors.email.message}
-              </span>
-            )}
-          </fieldset>
-
-          <fieldset className="fieldset relative my-3 h-25">
-            <legend className=" fieldset-legend text-lg">Password</legend>
-            <input
-              type={showPassword ? "text" : "password"}
-              className="input w-full bg-gray-100 rounded-sm py-5"
-              placeholder="Enter your password"
-              {...register("password", { required: "Password is required" })}
-            />
-            <span
-              onClick={() => setShowPassword(!showPassword)}
-              className="absolute right-4 top-5 cursor-pointer"
-            >
-              {showPassword ? <LuEye size={16} /> : <LuEyeClosed size={16} />}
-            </span>
-            {errors.password && (
-              <span className="text-red-500 text-base">
-                {errors.password.message}
-              </span>
-            )}
-          </fieldset>
-
-          <button className="btn btn-neutral w-full mt-5 p-5">Login</button>
-        </form> */}
-
         <Form className="flex flex-col gap-6" onSubmit={handleLogin}>
           <TextField
             isRequired

@@ -1,7 +1,7 @@
 import CourseCard from "@/components/homepage/CourseCard";
 
 const fetchCourses = async () => {
-  const res = await fetch("http://localhost:3000/courseData.json");
+  const res = await fetch("https://json.shahriyar.dev/Syed-Shabok/skillSphere");
   const courses = await res.json();
 
   return courses;

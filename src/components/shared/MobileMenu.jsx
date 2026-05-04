@@ -6,6 +6,7 @@ import { Avatar, Button, Separator, Spinner } from "@heroui/react";
 import { motion, AnimatePresence } from "motion/react";
 import NavLink from "./NavLink";
 import { authClient } from "@/lib/auth-client";
+import AuthSection from "./AuthSection";
 
 const MobileMenu = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -33,7 +34,7 @@ const MobileMenu = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.2 }}
-            className="absolute top-20 right-0 w-40 border border-t-0 rounded-b-lg bg-[#F6F8F9]  shadow-sm lg:hidden"
+            className="absolute top-20 right-0 w-45 border border-t-0 rounded-b-lg bg-[#F6F8F9]  shadow-sm lg:hidden"
           >
             <ul className="flex flex-col  p-4 text-right">
               <li className="p-2 hover:bg-slate-200 rounded-sm">
@@ -47,79 +48,14 @@ const MobileMenu = () => {
               </li>
             </ul>
 
-            {isPending ? (
-              <div>
-                <Separator
-                  className="w-35 mx-auto border"
-                  variant="tertiary"
-                  orientation="horizontal"
-                />
-
-                <div className="flex items-center justify-center">
-                  <Spinner size="lg" />
-                </div>
-              </div>
-            ) : user ? (
-              <div>
-                <Separator
-                  className="w-35 mx-auto border"
-                  variant="tertiary"
-                  orientation="horizontal"
-                />
-
-                <div className="flex gap-2 items-center justify-center py-3">
-                  <Button
-                    onClick={handleSignOut}
-                    size="sm"
-                    variant="ghost"
-                    className="rounded-xl  transition-all hover:scale-[1.02] text-sm md:text-base"
-                  >
-                    Logout
-                  </Button>
-
-                  <Avatar size="sm" className="border-3 border-[#17B188]">
-                    <Avatar.Image
-                      alt="John Doe"
-                      src={user?.image}
-                      referrerPolicy="no-referrer"
-                    />
-                    <Avatar.Fallback>{user?.name.charAt(0)}</Avatar.Fallback>
-                  </Avatar>
-                </div>
-              </div>
-            ) : (
-              <div>
-                <Separator
-                  className="w-35 mx-auto border"
-                  variant="tertiary"
-                  orientation="horizontal"
-                />
-
-                <ul className="flex items-center justify-center text-sm gap-2 mr-4 w-full py-3">
-                  <li>
-                    <Link href={"/login"}>
-                      <Button
-                        size="sm"
-                        className="bg-[#3B7597] text-white rounded-sm transition-all hover:scale-[1.02] text-sm lg:text-base"
-                      >
-                        Login
-                      </Button>
-                    </Link>
-                  </li>
-
-                  <li>
-                    <Link href={"/register"}>
-                      <Button
-                        size="sm"
-                        className="bg-[#17B188] text-white rounded-sm transition-all hover:scale-[1.02] text-sm md:text-base"
-                      >
-                        Sign up
-                      </Button>
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-            )}
+            <Separator
+              className="w-35 mx-auto border"
+              variant="tertiary"
+              orientation="horizontal"
+            />
+            <div className="ml-7 mr-4 py-3">
+              <AuthSection />
+            </div>
           </motion.div>
         )}
       </AnimatePresence>

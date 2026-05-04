@@ -47,26 +47,17 @@ const Navbar = () => {
             </li>
           </ul>
           <Separator
-            className="mx-3"
+            className="mx-3 hidden lg:flex"
             variant="tertiary"
             orientation="vertical"
           />
 
           {isPending ? (
-            <div className="flex items-center justify-center">
+            <div className="hidden lg:flex items-center justify-center">
               <Spinner size="lg" />
             </div>
           ) : user ? (
-            <div className="flex gap-2 items-center justify-center">
-              <Avatar size="lg" className="border-3 border-[#17B188]">
-                <Avatar.Image
-                  alt="John Doe"
-                  src={user?.image}
-                  referrerPolicy="no-referrer"
-                />
-                <Avatar.Fallback>{user?.name.charAt(0)}</Avatar.Fallback>
-              </Avatar>
-
+            <div className="hidden lg:flex gap-2 items-center justify-center mr-4">
               <Button
                 onClick={handleSignOut}
                 size="lg"
@@ -75,14 +66,23 @@ const Navbar = () => {
               >
                 Logout
               </Button>
+
+              <Avatar size="lg" className="border-3 border-[#17B188]">
+                <Avatar.Image
+                  alt="John Doe"
+                  src={user?.image}
+                  referrerPolicy="no-referrer"
+                />
+                <Avatar.Fallback>{user?.name.charAt(0)}</Avatar.Fallback>
+              </Avatar>
             </div>
           ) : (
-            <ul className="flex items-center text-sm gap-2">
+            <ul className="hidden lg:flex items-center text-sm gap-2 mr-4">
               <li>
                 <Link href={"/login"}>
                   <Button
                     size="lg"
-                    className="bg-[#3B7597] text-white rounded-xl shadow-lg transition-all hover:scale-[1.02] text-sm md:text-base"
+                    className="bg-[#3B7597] text-white rounded-xl shadow-lg transition-all hover:scale-[1.02] text-sm lg:text-base"
                   >
                     Login
                   </Button>

@@ -37,13 +37,13 @@ const Footer = () => {
         </div>
 
         <div className="flex justify-center gap-5 text-xl">
-          <Link href="#" className="hover:text-blue-300 ">
+          <Link href="#" className="hover:text-[#17B188]">
             <FaInstagram />
           </Link>
-          <Link href="#" className="hover:text-blue-300 ">
+          <Link href="#" className="hover:text-[#17B188]">
             <FaFacebook />
           </Link>
-          <Link href="#" className="hover:text-sky-300 ">
+          <Link href="#" className="hover:text-[#17B188]">
             <FaTwitter />
           </Link>
         </div>

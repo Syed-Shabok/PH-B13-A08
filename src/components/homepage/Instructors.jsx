@@ -1,7 +1,7 @@
 "use client";
 
 import { Card, Button } from "@heroui/react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import Image from "next/image";
 import { FaLinkedin, FaTwitter, FaGithub } from "react-icons/fa";
 import { BiStar } from "react-icons/bi";
@@ -49,10 +49,9 @@ const Instructors = () => {
   return (
     <section className=" w-full  rounded-2xl mb-10">
       <div>
-        {/* Section Heading */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6 text-center md:text-left">
           <div className="max-w-2xl">
-            <h2 className="text-3xl md:text-5xl  text-[#093C5D] mb-4">
+            <h2 className="text-3xl md:text-4xl  text-[#093C5D] mb-4">
               Learn from the Best
             </h2>
             <p className="text-gray-500 text-lg font-medium">
@@ -67,7 +66,6 @@ const Instructors = () => {
           </Button>
         </div>
 
-        {/* Instructors Grid - Now 4 columns */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {instructors.map((mentor, index) => (
             <motion.div
@@ -77,7 +75,7 @@ const Instructors = () => {
               transition={{ delay: index * 0.1 }}
               viewport={{ once: true }}
             >
-              <Card className="border border-gray-100 shadow-md hover:shadow-xl transition-all duration-300 bg-white group overflow-hidden rounded-2xl">
+              <Card className="border border-gray-100 shadow-md hover:shadow-xl transition-all duration-300 bg-gray-50 group overflow-hidden rounded-2xl">
                 <div className="flex flex-col">
                   {/* Instructor Photo */}
                   <div className="relative h-64 w-full overflow-hidden">

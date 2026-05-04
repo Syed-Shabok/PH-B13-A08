@@ -1,7 +1,6 @@
 import CourseCard from "./CourseCard";
 
 const fetchTopCourses = async () => {
-  // Use a relative URL for better compatibility or an Env Var
   const res = await fetch("https://json.shahriyar.dev/Syed-Shabok/skillSphere");
   const courses = await res.json();
   const sorted = courses.sort((a, b) => b.rating - a.rating);
@@ -14,9 +13,8 @@ const TopCourses = async () => {
   return (
     <section className="bg-white">
       <div>
-        {/* Consistent Heading Style */}
         <div className="flex flex-col mb-12">
-          <h2 className="text-3xl md:text-5xl font-bold text-[#093C5D] flex justify-center items-center gap-3">
+          <h2 className="text-3xl md:text-4xl  text-[#093C5D] flex justify-center items-center gap-3">
             <span className=" rounded-full hidden md:block" />
             Popular Courses
           </h2>

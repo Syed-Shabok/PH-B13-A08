@@ -31,6 +31,14 @@ const LoginPage = () => {
       callbackURL: "/",
     });
 
+    if (error) {
+      alert(error.message);
+    }
+
+    if (res) {
+      alert("Login Successful.");
+    }
+
     console.log({ data, error });
   };
 

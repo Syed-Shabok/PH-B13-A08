@@ -38,6 +38,14 @@ const RegisterPage = () => {
 
     console.log({ data, error });
 
+    if (error) {
+      alert(error.message);
+    }
+
+    if (res) {
+      alert("Login Successful.");
+    }
+
     if (!error) {
       router.push("/");
     }

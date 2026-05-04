@@ -14,6 +14,7 @@ import {
   Label,
   TextField,
 } from "@heroui/react";
+import { GrGoogle } from "react-icons/gr";
 
 const LoginPage = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -31,6 +32,12 @@ const LoginPage = () => {
     });
 
     console.log({ data, error });
+  };
+
+  const handlGoogleSignIn = async () => {
+    await authClient.signIn.social({
+      provider: "google",
+    });
   };
 
   return (
@@ -100,6 +107,16 @@ const LoginPage = () => {
             </Button>
           </div>
         </Form>
+
+        <p className="text-center my-3">Or</p>
+
+        <Button
+          onClick={handlGoogleSignIn}
+          variant="outline"
+          className="w-full border-2 py-5"
+        >
+          <GrGoogle /> Sign In With Google
+        </Button>
 
         <p className="mt-5 text-center">
           Don't have an account?{" "}

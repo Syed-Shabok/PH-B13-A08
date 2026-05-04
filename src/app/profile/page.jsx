@@ -24,14 +24,14 @@ const ProfilePage = () => {
         <div className="relative flex flex-col items-center px-6 pb-10">
           <div className="absolute -top-16">
             <Avatar className="w-30 h-30 border-4 border-white shadow-md text-2xl">
-              <Avatar.Image src={user.image} alt={user?.name} />
-              <Avatar.Fallback>{user.name.charAt(0)}</Avatar.Fallback>
+              <Avatar.Image src={user?.image} alt={user?.name} />
+              <Avatar.Fallback>{user?.name.charAt(0)}</Avatar.Fallback>
             </Avatar>
           </div>
 
           <div className="mt-16 text-center space-y-1">
-            <h2 className="text-2xl font-bold text-[#093C5D]">{user.name}</h2>
-            <p className="text-muted text-lg font-medium">{user.email}</p>
+            <h2 className="text-2xl font-bold text-[#093C5D]">{user?.name}</h2>
+            <p className="text-muted text-lg font-medium">{user?.email}</p>
           </div>
 
           <div className="w-full flex justify-around my-8">

@@ -16,9 +16,13 @@ import {
 } from "@heroui/react";
 import { GrGoogle } from "react-icons/gr";
 import MotionWrapper from "@/components/ui/MotionWrapper";
+import { toast } from "react-toastify";
+import { useRouter } from "next/navigation";
 
 const LoginPage = () => {
   const [showPassword, setShowPassword] = useState(false);
+
+  const router = useRouter();
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -26,21 +30,27 @@ const LoginPage = () => {
     const email = e.target.email.value;
     const password = e.target.password.value;
 
-    const { data, error } = await authClient.signIn.email({
-      email,
-      password,
-      callbackURL: "/",
-    });
+    try {
+      const { data, error } = await authClient.signIn.email({
+        email,
+        password,
+        // callbackURL: "/",
+      });
 
-    if (error) {
-      alert(error.message);
+      if (error) {
+        alert(error.message);
+        return;
+      }
+
+      if (data) {
+        toast.success("Login Successful.");
+        router.push("/");
+      }
+
+      console.log({ data, error });
+    } catch (err) {
+      toast.error(err.message || "Something went wrong");
     }
-
-    if (res) {
-      alert("Login Successful.");
-    }
-
-    console.log({ data, error });
   };
 
   const handlGoogleSignIn = async () => {

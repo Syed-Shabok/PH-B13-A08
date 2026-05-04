@@ -3,13 +3,19 @@
 import { Button, Avatar, Spinner } from "@heroui/react";
 import Link from "next/link";
 import { authClient } from "@/lib/auth-client";
+import { useRouter } from "next/navigation";
+import { toast } from "react-toastify";
 
 const AuthSection = () => {
   const { data: session, isPending } = authClient.useSession();
   const user = session?.user;
 
+  const router = useRouter();
+
   const handleSignOut = async () => {
     await authClient.signOut();
+    toast.success("Logged out successfully.");
+    router.push("/");
   };
 
   if (isPending) {

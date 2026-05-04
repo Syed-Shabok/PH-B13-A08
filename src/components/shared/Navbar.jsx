@@ -8,13 +8,6 @@ import { authClient } from "@/lib/auth-client";
 import AuthSection from "./AuthSection";
 
 const Navbar = () => {
-  // const { data: session, isPending } = authClient.useSession();
-  // const user = session?.user;
-
-  // const handleSignOut = async () => {
-  //   await authClient.signOut();
-  // };
-
   return (
     <nav className="sticky top-0 z-40 w-full border-b border-separator bg-background/70 backdrop-blur-lg py-2">
       <div className="container mx-auto">

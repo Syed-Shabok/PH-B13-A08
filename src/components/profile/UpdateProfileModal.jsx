@@ -4,6 +4,7 @@ import { useState } from "react";
 import { authClient } from "@/lib/auth-client";
 import { Button, Input, Label, Modal, TextField } from "@heroui/react";
 import { BiEdit, BiLinkAlt, BiUser } from "react-icons/bi";
+import { toast } from "react-toastify";
 
 export function UpdateProfileModal() {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,6 +29,7 @@ export function UpdateProfileModal() {
       setIsOpen(false);
     }
 
+    toast.success("User updated.");
     setLoading(false);
   };
 

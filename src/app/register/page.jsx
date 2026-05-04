@@ -16,6 +16,7 @@ import {
 } from "@heroui/react";
 import { useRouter } from "next/navigation";
 import MotionWrapper from "@/components/ui/MotionWrapper";
+import { toast } from "react-toastify";
 
 const RegisterPage = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -30,28 +31,27 @@ const RegisterPage = () => {
     const email = e.target.email.value;
     const password = e.target.password.value;
 
-    const { data, error } = await authClient.signUp.email({
-      name,
-      email,
-      password,
-      image: photo,
-    });
+    try {
+      const { data, error } = await authClient.signUp.email({
+        name,
+        email,
+        password,
+        image: photo,
+      });
 
-    console.log({ data, error });
+      if (error) {
+        toast.error(error.message || "Registration failed");
+        return;
+      }
 
-    if (error) {
-      alert(error.message);
-    }
-
-    if (res) {
-      alert("Login Successful.");
-    }
-
-    if (!error) {
-      router.push("/");
+      if (data) {
+        toast.success("Account created successfully!");
+        router.push("/");
+      }
+    } catch (err) {
+      toast.error(err?.message || "Something went wrong");
     }
   };
-
   return (
     <MotionWrapper>
       <div className="container mx-auto flex flex-col items-center justify-center rounded-lg lg:h-[85vh] ">

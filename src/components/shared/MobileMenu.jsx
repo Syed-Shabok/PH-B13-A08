@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { Avatar, Button, Separator, Spinner } from "@heroui/react";
@@ -18,18 +18,40 @@ const MobileMenu = () => {
     await authClient.signOut();
   };
 
+  const menuRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (!menuRef.current) return;
+
+      const isInsideMenu = menuRef.current.contains(event.target);
+      const isButton = event.target.closest("button");
+
+      if (!isInsideMenu && !isButton) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    document.addEventListener("click", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, []);
+
   return (
     <>
       <Button
         variant="ghost"
         className="lg:hidden border rounded-md mr-4"
-        onClick={() => setIsMenuOpen(!isMenuOpen)}
+        onClick={() => setIsMenuOpen((prev) => !prev)}
       >
         <RxHamburgerMenu />
       </Button>
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div
+            ref={menuRef}
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}

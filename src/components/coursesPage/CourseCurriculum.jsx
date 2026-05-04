@@ -143,7 +143,7 @@ const CourseCurriculum = () => {
           </p>
         </div>
         <div>
-          <Button className="bg-[#5DF8D8] text-[#093C5D] font-bold px-8 py-5 md:py-6 rounded-xl w-full lg:w-auto text-sm md:text-base transition-all hover:scale-[1.02] ">
+          <Button className="bg-[#17B188] text-white font-bold px-8 py-5 md:py-6 rounded-xl w-full lg:w-auto text-sm md:text-base transition-all hover:scale-[1.02] ">
             Get Full Access
           </Button>
         </div>

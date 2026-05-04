@@ -33,7 +33,7 @@ const RegisterPage = () => {
       name,
       email,
       password,
-      photo,
+      image: photo,
     });
 
     console.log({ data, error });

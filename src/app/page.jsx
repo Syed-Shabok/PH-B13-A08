@@ -4,6 +4,7 @@ import LearningTips from "@/components/homepage/LearningTips";
 import TopCourses from "@/components/homepage/TopCourses";
 import { Button } from "@heroui/react";
 import Image from "next/image";
+import { Suspense } from "react";
 
 export default function Home() {
   return (

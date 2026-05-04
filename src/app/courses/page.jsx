@@ -1,20 +1,26 @@
 "use client";
 
 import CourseCard from "@/components/homepage/CourseCard";
+import { Spinner } from "@heroui/react";
 import { useEffect, useState } from "react";
 import { CgUnavailable } from "react-icons/cg";
 
 const AllCourses = () => {
   const [courses, setCourses] = useState([]);
   const [searchInput, setSearchInput] = useState("");
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchCourses = async () => {
+      setLoading(true);
+
       const res = await fetch(
         "https://json.shahriyar.dev/Syed-Shabok/skillSphere",
       );
       const data = await res.json();
       setCourses(data);
+
+      setLoading(false);
     };
 
     fetchCourses();
@@ -44,9 +50,12 @@ const AllCourses = () => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 w-full items-stretch">
-        {filteredCourses.length === 0 ? (
-          <div className="h-[65vh] flex flex-col items-center justify-center  bg-gray-50 rounded-xl shadow-sm border col-span-3 text-muted gap-5">
-            {/* <CgUnavailable size={45} /> */}
+        {loading ? (
+          <div className="h-[65vh] flex items-center justify-center col-span-3">
+            <Spinner size="lg" />
+          </div>
+        ) : filteredCourses.length === 0 ? (
+          <div className="h-[65vh] flex flex-col items-center justify-center bg-gray-50 rounded-xl shadow-sm border col-span-3 text-gray-500 gap-5">
             <p className="text-3xl">No Courses Found.</p>
           </div>
         ) : (

@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🎓 SkillSphere - Modern E-Learning Platform
 
-## Getting Started
+[![Live Demo](https://img.shields.io/badge/demo-live-green.svg)](https://the-skillsphere.vercel.app/)
+[![Next.js](https://img.shields.io/badge/Next.js-15-black.svg)](https://nextjs.org/)
+[![HeroUI](https://img.shields.io/badge/UI-HeroUI-blue.svg)](https://heroui.com/)
 
-First, run the development server:
+**SkillSphere** is a high-performance, responsive e-learning platform designed to bridge the gap between students and industry-standard skills. Built with the latest web technologies, it offers a seamless experience for discovering, viewing, and enrolling in professional courses.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🌟 Key Features
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- **Secure Authentication:** Integrated social login (Google) and email/password authentication via Better-Auth.
+- **Dynamic Course Listings:** Interactive course cards featuring ratings, difficulty levels, and categories.
+- **Responsive Design:** Fully optimized for mobile, tablet, and desktop views using Tailwind CSS and HeroUI.
+- **Smooth Animations:** Implemented `motion/react` (Framer Motion) for staggered entrance animations and interactive hover states.
+- **Detailed Course Pages:** Dynamic routing to view comprehensive course descriptions, instructor details, and curricula.
+- **High Performance:** Built using Next.js App Router for optimized server-side rendering and fast page transitions.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🛠️ Tech Stack & Packages
 
-## Learn More
+### Core Framework
 
-To learn more about Next.js, take a look at the following resources:
+- **Next.js 15:** React framework for production.
+- **React 19:** UI library.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Styling & UI
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Tailwind CSS:** Utility-first CSS framework.
+- **HeroUI (formerly NextUI):** Accessible and beautiful UI component library.
+- **React Icons:** For industry-standard iconography (Fa, Lu, Gr).
+- **Motion/React:** For professional-grade UI animations and transitions.
 
-## Deploy on Vercel
+### Backend & Auth
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Better-Auth:** Secure, modern authentication handling.
+- **Google OAuth:** Social login integration.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 📸 Screenshots
+
+---

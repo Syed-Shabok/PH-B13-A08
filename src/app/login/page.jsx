@@ -17,12 +17,15 @@ import {
 import { GrGoogle } from "react-icons/gr";
 import MotionWrapper from "@/components/ui/MotionWrapper";
 import { toast } from "react-toastify";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 
 const LoginPage = () => {
   const [showPassword, setShowPassword] = useState(false);
 
   const router = useRouter();
+  const searchParams = useSearchParams();
+
+  const callbackUrl = searchParams.get("callbackUrl") || "/";
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -38,13 +41,14 @@ const LoginPage = () => {
       });
 
       if (error) {
-        alert(error.message);
+        toast.error(error.message);
         return;
       }
 
       if (data) {
         toast.success("Login Successful.");
-        router.push("/");
+        // router.push("/");
+        router.push(callbackUrl);
       }
 
       console.log({ data, error });
@@ -56,6 +60,7 @@ const LoginPage = () => {
   const handlGoogleSignIn = async () => {
     await authClient.signIn.social({
       provider: "google",
+      callbackURL: callbackUrl,
     });
   };
 

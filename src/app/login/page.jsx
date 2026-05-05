@@ -131,7 +131,7 @@ const LoginPage = () => {
             </div>
           </Form>
 
-          <p className="text-center my-3">Or</p>
+          <p className="text-center my-3 font-medium">Or</p>
 
           <Button
             onClick={handlGoogleSignIn}

@@ -17,6 +17,7 @@ import {
 import { useRouter } from "next/navigation";
 import MotionWrapper from "@/components/ui/MotionWrapper";
 import { toast } from "react-toastify";
+import { GrGoogle } from "react-icons/gr";
 
 const RegisterPage = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -45,16 +46,23 @@ const RegisterPage = () => {
       }
 
       if (data) {
-        toast.success("Account created successfully!");
+        toast.success("Account created successfully.");
         router.push("/");
       }
     } catch (err) {
       toast.error(err?.message || "Something went wrong");
     }
   };
+
+  const handlGoogleSignIn = async () => {
+    await authClient.signIn.social({
+      provider: "google",
+    });
+  };
+
   return (
     <MotionWrapper>
-      <div className="container mx-auto flex flex-col items-center justify-center rounded-lg lg:h-[85vh] ">
+      <div className="container mx-auto flex flex-col items-center justify-center min-h-[80vh] py-10 px-4">
         <div className="bg-gray-50 border p-10 rounded-lg  shadow-lg w-full md:w-[75%] lg:w-[33%] my-10">
           <h2 className="text-2xl text-center font-bold">
             Register a new account
@@ -137,6 +145,16 @@ const RegisterPage = () => {
                 Register
               </Button>
             </div>
+
+            <p className="text-center text-base font-medium">Or</p>
+
+            <Button
+              onClick={handlGoogleSignIn}
+              variant="outline"
+              className="w-full border-2 py-5"
+            >
+              <GrGoogle /> Sign In With Google
+            </Button>
           </Form>
         </div>
       </div>

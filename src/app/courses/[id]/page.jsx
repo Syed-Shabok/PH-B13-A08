@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { notFound } from "next/navigation";
 import {
   FaCheckCircle,
   FaLayerGroup,
@@ -20,6 +21,10 @@ const fetchCourse = async (id) => {
 const CourseDetails = async ({ params }) => {
   const { id } = await params;
   const course = await fetchCourse(id);
+
+  if (!course) {
+    notFound();
+  }
 
   const categoryStyles = {
     Development: "border-blue-200 text-blue-500 bg-blue-50",

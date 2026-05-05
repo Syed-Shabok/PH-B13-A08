@@ -39,5 +39,5 @@
 ---
 
 ## 📸 Screenshots
+<img width="866" height="649" alt="mockup-2" src="https://github.com/user-attachments/assets/9fadabf5-d85e-409f-ba31-43f9a35feda5" />
 
----

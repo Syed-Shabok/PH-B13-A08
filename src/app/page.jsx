@@ -1,6 +1,8 @@
 import Banner from "@/components/homepage/Banner";
 import Instructors from "@/components/homepage/Instructors";
 import LearningTips from "@/components/homepage/LearningTips";
+import NewReleases from "@/components/homepage/NewReleases";
+
 import TopCourses from "@/components/homepage/TopCourses";
 import { Button } from "@heroui/react";
 import Image from "next/image";
@@ -13,6 +15,7 @@ export default function Home() {
       <TopCourses />
       <LearningTips />
       <Instructors />
+      <NewReleases />
     </div>
   );
 }
